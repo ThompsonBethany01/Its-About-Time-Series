@@ -1,5 +1,7 @@
 import pandas as pd
 
+######################################################################################
+
 def prep_data():
     '''
     Prepare the fitbit data by reading the csv file as the df,
@@ -21,3 +23,19 @@ def prep_data():
     df['weekday'] = df.index.day_name()
     
     return df
+
+######################################################################################
+
+def split_data(df):
+    '''
+    Takes a df and splits by the index, 70% for train and 30% for test
+    '''
+    # determining index for splitting the data
+    train_size = .70
+    n = df.shape[0]
+    test_start_index = round(train_size * n)
+
+    train = df[:test_start_index] # everything up (not including) to the test_start_index
+    test = df[test_start_index:] # everything from the test_start_index to the end
+
+    return train, test
