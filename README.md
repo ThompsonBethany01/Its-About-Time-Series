@@ -36,9 +36,33 @@ Everybody makes mistakes, even here at B.R.Co.®! Someone in a lab coat mixed up
 Are you dying to know what's in the usb yet? Here's the low down below.  
 ![USB-Files](https://i.pinimg.com/originals/d8/6f/22/d86f2200de039786ecec46658534e186.png)  
 ### Data Dictionary
+After using the Prepare.py module, the data frame will contain the columns as described below. Only the first two tables from the files were included, as a majority of the food log table had no data.   
+
+| Column Name         | Description                                               |
+|---------------------|-----------------------------------------------------------|
+| date                | yyyy-mm-dd, df index                                      |
+| cals_burned         | calories burned for the day                               |
+| steps               | steps taken in the day                                    |
+| dist                | distance walked, possibly in miles                        |
+| floors              | uncertain, possible floors walked up or down              |
+| mins_sedentary      | minutes of the day sedentary                              |
+| mins_lightly_active | minutes of the day lightly active                         |
+| mins_fairly_active  | minutes of the day fairly active                          |
+| mins_very_active    | minutes of the day vary active                            |
+| activity_cals       | uncertain, possibly calories burned due to active minutes |
+| month               | month of the observation                                  |
+| weekday             | weekday of the observation                                |  
+
 # Project Steps
 ## Acquire
+Data within the usb came in eight seperate files - one for a month's worth of observations. To join the files together, each file was uploaded into one google sheets document with each file in its own sheet. The data was added all together in one sheet as well. The final sheet to be exported as a csv file did not include the food log as it contained more than 95% of zero values. Columns with numbers containing commas (like 2,345) were converted to integers with no commas. To look at this google sheet, click [here](https://docs.google.com/spreadsheets/d/1ZjPl1BCtA8K_U5_0DT94LAOfqYanNKf2_9_B4tespWA/edit?usp=sharing).
 ## Prepare
+The function to prep the data is within the Prepare.py module. After using the function, the data:
+- date column is converted to a datetime type.  
+- index is set to the date column.  
+- contains additional columns for the observation month and weekday.  
+
+Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors.
 ## Explore
 ## Model
 ## Conclusions
