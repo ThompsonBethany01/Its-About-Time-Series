@@ -62,7 +62,13 @@ The function to prep the data is within the Prepare.py module. After using the f
 - index is set to the date column.  
 - contains additional columns for the observation month and weekday.  
 
-Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors.
+A seperate function in the Prepare.py module splits the data by:
+- making index to split based off 70% point of index
+- setting train to every data point up to this index
+- setting test to every data point starting at this index and on
+-returns the train and test dfs
+
+Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors. More features may be added later during the explore and model process.
 ## Explore
 ## Model
 ## Conclusions
