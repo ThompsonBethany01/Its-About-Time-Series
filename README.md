@@ -70,6 +70,9 @@ A seperate function in the Prepare.py module splits the data by:
 
 Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors. More features may be added later during the explore and model process.
 ## Explore
+
+![Individual-Characteristics](https://i.pinimg.com/originals/84/03/78/8403781a4f84dc0025e907e277f2b5b2.png)
+
 ## Model
 ## Conclusions
 # How to Reproduce
