@@ -101,7 +101,7 @@ An example of the evaluation df:
 7. Combined the predictions in one dataframe to save as a .csv file
 
 ## Conclusions 
-![Individual-Characteristics](https://i.pinimg.com/originals/c9/d7/52/c9d752870924f43776904b772cf9b987.png)  
+![Individual-Characteristics](https://i.pinimg.com/originals/29/90/84/299084d50764c7338477fd3c2355d234.png)  
 
 The final models chosen to predict the next two weeks of the data was a rolling 7-day average and Holt Optimized. These predictions are uploaded to this repo in the file titled Predictions.csv.
 
