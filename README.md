@@ -34,7 +34,7 @@ Everybody makes mistakes, even here at B.R.Co.®! Someone in a lab coat mixed up
 ## Data 
 ### The USB
 Are you dying to know what's in the usb yet? Here's the low down below.  
-![USB-Files](https://i.pinimg.com/originals/d8/6f/22/d86f2200de039786ecec46658534e186.png)  
+![USB-Files](https://i.pinimg.com/originals/e6/4e/e9/e64ee92a8b6f3026d1b0d09791c263cc.png)  
 ### Data Dictionary
 After using the Prepare.py module, the data frame will contain the columns as described below. Only the first two tables from the files were included, as a majority of the food log table had no data.   
 
@@ -62,11 +62,10 @@ The function to prep the data is within the Prepare.py module. After using the f
 - index is set to the date column.  
 - contains additional columns for the observation month and weekday.  
 
-A seperate function in the Prepare.py module splits the data by:
-- making index to split based off 70% point of index
-- setting train to every data point up to this index
-- setting test to every data point starting at this index and on
--returns the train and test dfs
+A seperate function in the Prepare.py module splits the data into:
+- 50% train
+- 30% validate
+- 20% test
 
 Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors. More features may be added later during the explore and model process.
 ## Explore
