@@ -105,9 +105,12 @@ An example of the evaluation df:
 
 The final models chosen to predict the next two weeks of the data was a rolling 7-day average and Holt Optimized. These predictions are uploaded to this repo in the file titled Predictions.csv.
 
+## Next Steps
+Create functions for modeling in a Model.py file to clean up the final notebook used.
+
 # How to Reproduce
 - [x] Read this Readme
-- [ ] Download <kbd>Prepare.py</kbd> , <kbd>Modeling.py</kbd> , and <kbd>Analysis.ipynb</kbd> in your working directory
+- [ ] Download <kbd>Prepare.py</kbd> and <kbd>Analysis.ipynb</kbd> in your working directory
 - [ ] Run the notebook or do your own exploration and modeling
 
 # Author
