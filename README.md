@@ -70,13 +70,46 @@ A seperate function in the Prepare.py module splits the data by:
 
 Additional prep was not neccessary, as the raw data was fairly clean. There were no nulls, and the only column with possible outliers is floors. More features may be added later during the explore and model process.
 ## Explore
-
-![Individual-Characteristics](https://i.pinimg.com/originals/84/03/78/8403781a4f84dc0025e907e277f2b5b2.png)
+Univariate analysis was done on the whole dataframe to determine distributions of the individual features. Further analysis was completed on the train df with time series. Data was resampled by weekly, bi-weekly, and monthly periods to visualize trends, if any. Made conclusions on the individual based on this exploration.
 
 ## Model
-## Conclusions
+Five different models were created and tested on the split dataframes. There was a:  
+- Simple average, the baseline
+  - predicts each future observation as the overall average
+- Weekly rolling average
+  - predicts each future obsrvation as the most recent weekly average
+- Monthly rolling average
+  - predicts each future observation as the most recent monthly average
+- Holt's Linear Trend
+  - exponential smoothing applied to both the average and the trend
+  - one model with optimized = true
+  - one model with alpha = .1 and beta = .1
+  
+To determine which model was best for each feature (df column):
+1. Predicted Validate by fitting models on Train.
+2. Calculated RMSE. Created an evaluation df to hold the feature RMSE with the model name.
+3. Combined Train and Validate. Predicted Test by fitting models on the Train+Validate df.
+4. Calculated RMSE and added as new column in the evaluation df.  
+
+An example of the evaluation df:
+| Target Name   | Model Name   | rmse | test rmse |  
+|---------------|--------------|------|-----------|
+|calories burned|simple average|123.45|234.56     |
+
+5. Evaluated models for each feature with the eval_df, taking into consideration both rmse
+6. Once the models were choosen, predicted the next two weeks of unkown data fit on the whole df
+7. Combined the predictions in one dataframe to save as a .csv file
+
+## Conclusions 
+![Individual-Characteristics](https://i.pinimg.com/originals/c9/d7/52/c9d752870924f43776904b772cf9b987.png)  
+
+The final models chosen to predict the next two weeks of the data was a rolling 7-day average and Holt Optimized. These predictions are uploaded to this repo in the file titled Predictions.csv.
+
 # How to Reproduce
 - [x] Read this Readme
 - [ ] Download <kbd>Prepare.py</kbd> , <kbd>Modeling.py</kbd> , and <kbd>Analysis.ipynb</kbd> in your working directory
 - [ ] Run the notebook or do your own exploration and modeling
+
 # Author
+[Bethany Thompson](https://github.com/ThompsonBethany01)   
+Feel free to reach out to me for any questions, comment, or suggestions!
