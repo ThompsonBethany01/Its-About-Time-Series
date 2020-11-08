@@ -34,7 +34,7 @@ Everybody makes mistakes, even here at B.R.Co.®! Someone in a lab coat mixed up
 ## Data 
 ### The USB
 Are you dying to know what's in the usb yet? Here's the low down below.  
-![USB-Files](https://i.pinimg.com/originals/e4/ff/3e/e4ff3e0082b1b8b59ece1fc3de9c939e.png)  
+![USB-Files](https://i.pinimg.com/originals/f2/2d/5a/f22d5a7d417ee292efc31254cf970b2a.png)  
 ### Data Dictionary
 After using the Prepare.py module, the data frame will contain the columns as described below. Only the first two tables from the files were included, as a majority of the food log table had no data.   
 
@@ -71,7 +71,7 @@ Additional prep was not neccessary, as the raw data was fairly clean. There were
 ## Explore
 Univariate analysis was done on the whole dataframe to determine distributions of the individual features. Further analysis was completed on the train df with time series. Data was resampled by weekly, bi-weekly, and monthly periods to visualize trends, if any. Made conclusions on the individual based on this exploration.
 
-![Upward-Trends](https://i.pinimg.com/originals/46/38/c0/4638c0f6fb8331b1e94c6cd08dc3ef82.png)
+![Upward-Trends](https://i.pinimg.com/originals/1d/8c/0e/1d8c0ed4a2e81f9b4c66195adcfe541f.png)
 
 ## Model
 Five different models were created and tested on the split dataframes. There was a:  
